@@ -20,12 +20,14 @@ func main() {
 		contact: 8888777,
 	},
 	}
-	a.updateName("avi")
+	// personPointers := &a
+	// personPointers.updateName("avi")
+	a.updateName("asvi")
 	a.print()
 }
 
-func (p person) updateName(name string) {
-	p.name = name
+func (p *person) updateName(name string) {
+	(*p).name = name
 }
 
 func (p person) print() {
